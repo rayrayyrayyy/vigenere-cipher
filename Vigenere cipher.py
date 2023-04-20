@@ -1,3 +1,8 @@
+import pyfiglet
+from termcolor import colored, cprint
+print_green = lambda x: cprint(x, 'green')
+print_blue = lambda x: cprint(x, 'blue')
+
 # create a dictionary
 alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
