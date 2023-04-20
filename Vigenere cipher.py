@@ -38,3 +38,10 @@ def decryption(cipher, key):
             i += 1
 
     return decrypt
+
+print('\n' + '=====' * 25)
+message = input('\nEnter a message: ')
+key = input('Enter a key: ')
+
+upper_case_message = message.upper()
+upper_case_key = key.upper()
