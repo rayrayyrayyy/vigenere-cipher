@@ -45,3 +45,15 @@ key = input('Enter a key: ')
 
 upper_case_message = message.upper()
 upper_case_key = key.upper()
+
+print('\n' + '=====' * 25)
+print_green("\nLOADING...\n")
+print('\033[5m' + '=====' * 25)
+
+import time
+time.sleep (5)
+
+encrypted_message = encryption(upper_case_message, upper_case_key)
+
+print('Original message: ' + '\033[4m' + upper_case_message + '\033[0m\n')
+print_blue('\033[1m' + "Ciphertext: " + '\033[0m\n' + '\033[1;35m' + pyfiglet.figlet_format(encrypted_message, font = 'starwars'))
