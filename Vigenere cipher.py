@@ -20,5 +20,16 @@ def encryption(message, key):
     return encrypt
 
 # define decryption
+def decryption(cipher, key):
+    decrypt = ''
     # split the cipher to match the lenght of the key
+    _split_cipher = [cipher[i:i + len(key)] for i in range(0, len(cipher), len(key))] # start, end, step
     # convert the message to index and add the key
+    for each_split in _split_cipher:
+        i = 0
+        for letter in each_split:
+            number_text = (letter_length[letter] - letter_length[key[i]]) % len(alphabet)
+            decrypt += index_lenght[number_text]
+            i += 1
+
+    return decrypt
